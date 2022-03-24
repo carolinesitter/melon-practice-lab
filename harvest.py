@@ -37,6 +37,9 @@ class MelonType:
 
 def make_melon_types():
     """Returns a list of current melon types."""
+
+    all_melon_types = []
+
     melon_musk = MelonType(
         "musk", 
         "1998", 
@@ -50,7 +53,8 @@ def make_melon_types():
         "cas", 
         "2003", 
         "orange", 
-        "has seeds", 
+        "has seeds",
+        "None", 
         "Casaba")
     melon_casaba.add_pairing("strawberries")
     melon_casaba.add_pairing("mint")
@@ -60,6 +64,7 @@ def make_melon_types():
         "1996",
         "green",
         "has seeds",
+        "None",
         "Crenshaw"
     )
     melon_cren.add_pairing("prosciutto")
@@ -74,9 +79,8 @@ def make_melon_types():
     melon_yellow_w.add_pairing("ice cream")
 
 
-    all_melon_types = [melon_musk, melon_casaba, melon_cren, melon_yellow_w]
+    all_melon_types.extend([melon_musk, melon_casaba, melon_cren, melon_yellow_w])
 
-    # Fill in the rest
 
     return all_melon_types
 
