@@ -79,7 +79,8 @@ def make_melon_types():
     melon_yellow_w.add_pairing("ice cream")
 
 
-    all_melon_types.extend([melon_musk, melon_casaba, melon_cren, melon_yellow_w])
+    all_melon_types.extend([melon_musk, melon_casaba,
+     melon_cren, melon_yellow_w])
 
 
     return all_melon_types
@@ -148,6 +149,23 @@ def make_melons(melon_types):
     """Returns a list of Melon objects."""
 
     # Fill in the rest
+
+    melon_list = []
+
+    melon_1 = Melon("yw", 8, 7, 2, "Sheila")
+    melon_2 = Melon("yw", 3, 4, 2, "Sheila")
+    melon_3 = Melon("yw", 9, 8, 2, "Sheila")
+    melon_4 = Melon("cas", 10, 6, 35, "Sheila")
+    melon_5 = Melon("cren", 8, 9, 35, "Micheal")
+    melon_6 = Melon("cren", 8, 2, 35, "Micheal")
+    melon_7 = Melon("cren", 2, 3, 4, "Micheal")
+    melon_8 = Melon("musk", 6, 7, 4, "Micheal")
+    melon_9 = Melon("yw", 7, 10, 3, "Sheila")
+
+    melon_list.extend([melon_1, melon_2, melon_3, melon_4,
+     melon_5, melon_6, melon_7, melon_8, melon_9])
+
+    return melon_list
 
 
 def get_sellability_report(melons):
