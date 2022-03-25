@@ -44,8 +44,8 @@ def make_melon_types():
         "musk", 
         "1998", 
         "green",
-        "seedless", 
-        "bestseller", 
+        "True", 
+        "True", 
         "Muskmelon")
     melon_musk.add_pairing("mint")
     
@@ -53,8 +53,8 @@ def make_melon_types():
         "cas", 
         "2003", 
         "orange", 
-        "has seeds",
-        "None", 
+        "False",
+        "False", 
         "Casaba")
     melon_casaba.add_pairing("strawberries")
     melon_casaba.add_pairing("mint")
@@ -63,8 +63,8 @@ def make_melon_types():
         "cren",
         "1996",
         "green",
-        "has seeds",
-        "None",
+        "False",
+        "False",
         "Crenshaw"
     )
     melon_cren.add_pairing("prosciutto")
@@ -73,8 +73,8 @@ def make_melon_types():
         "yw", 
         "2013", 
         "yellow", 
-        "has seeds", 
-        "bestseller", 
+        "False", 
+        "True", 
         "Yellow Watermelon")
     melon_yellow_w.add_pairing("ice cream")
 
@@ -89,11 +89,11 @@ def print_pairing_info(melon_types):
     """Prints information about each melon type's pairings."""
 
     # we only need to loop through melon types
-    for item in melon_types:            
-        print(f"{item.name} pairs with ")
+    for melon in melon_types:            
+        print(f"{melon.name} pairs with ")
 
         # loop through the list to grab each pairing item 
-        for pair in item.pairings:
+        for pair in melon.pairings:
             print(f"- {pair}")
         print()
 
@@ -102,7 +102,14 @@ def make_melon_type_lookup(melon_types):
     """Takes a list of MelonTypes and returns a dictionary of melon type by code."""
 
     # Fill in the rest
+    melons_dictionary = {}
+    for melon in melon_types:
+        melons_dictionary[melon.code] = melon
 
+    for key, value in melons_dictionary.items():
+        print(f"{key} : {value}")
+    
+    return melons_dictionary
 
 ############
 # Part 2   #
@@ -113,6 +120,8 @@ class Melon:
     """A melon in a melon harvest."""
 
     # Fill in the rest
+
+    #def __init__(self, type, shape, cp;pr, origin, person):
     # Needs __init__ and is_sellable methods
 
 
