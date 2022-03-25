@@ -121,8 +121,27 @@ class Melon:
 
     # Fill in the rest
 
-    #def __init__(self, type, shape, cp;pr, origin, person):
-    # Needs __init__ and is_sellable methods
+    def __init__(self, melon_type, shape_rating,
+     color_rating, harvest_field, harvester):
+
+        self.melon_type = melon_type
+        self.shape_rating = shape_rating
+        self.color_rating = color_rating
+        self.harvest_field = harvest_field
+        self.harvester = harvester
+
+    def is_sellable(self, sellable):
+        
+        if self.shape_rating < 5 and self.color_rating > 5 and self.harvest_field != 3:
+
+             sellability = "This melon can be sold!"
+
+        else:
+
+            sellability = "Oh no! This melon cannot be sold!"
+            
+        return sellability
+
 
 
 def make_melons(melon_types):
